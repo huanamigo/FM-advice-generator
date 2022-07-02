@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+
+$GrayishBlue: hsl(217, 19%, 38%);
+$DarkGrayishBlue: hsl(217, 19%, 24%);
+$DarkBlue: hsl(218, 23%, 16%);
+$LightCyan: hsl(193, 38%, 86%);
+$NeonGreen: hsl(150, 100%, 66%);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $DarkBlue;
+}
+
+.main {
+  position: relative;
+  background-color: $DarkGrayishBlue;
+  padding: 30px 15px;
+  width: min(95vw, 40rem);
+  min-height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: none;
+  border-radius: 15px;
+}
+
+#quoteID {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: $NeonGreen;
+  text-align: center;
+}
+
+#mainQuote {
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  color: $LightCyan;
+}
+
+.divider {
+  background-image: url(../images/pattern-divider-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 10%;
+}
+
+.randomizeBtn {
+  position: absolute;
+  bottom: -35px;
+  left: calc(50% - 35px);
+  background-image: url(../images/icon-dice.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $NeonGreen;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  border: none;
+  transition: all 0.3s ease-in-out 0s;
+
+  &:hover {
+    box-shadow: 0px 0px 50px $NeonGreen;
+  }
+
+  &:active {
+    background-color: white;
+  }
+}
+
+.attribution {
+  position: absolute;
+  font-size: 12px;
+  top: 90vh;
+  color: $LightCyan;
+  a {
+    text-decoration: none;
+    color: $NeonGreen;
+  }
+}
